@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         superCalendar.setOnCalendarSelectedListener(new SuperCalendar.OnCalendarSelectedListener() {
             @Override
             public void onCalendarSelected(Date date) {
-                Toast.makeText(MainActivity.this,new SimpleDateFormat("MM yyyy").format(date),Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, new SimpleDateFormat("MM yyyy").format(date), Toast.LENGTH_SHORT)
+                        .show();
             }
-        });
-    }
+        });}
 }

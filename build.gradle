@@ -21,3 +21,20 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//apply plugin: 'checkstyle'
+//checkstyle {
+//    toolVersion '6.1.1'
+//    showViolations true
+//}
+//plugins.apply('checkstyle')
+//
+//task('checkstyle', type: Checkstyle) {
+//    configFile rootProject.file('checkstyle.xml')
+//    source 'src/main/java'
+//    ignoreFailures false
+//    showViolations true
+//    include '**/*.java'
+//
+//    classpath = files()
+//}

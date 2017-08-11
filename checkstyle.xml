@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+
+    <property name="charset" value="UTF-8"/>
+
+
+
+
+    <module name="TreeWalker">
+        <!--每行最大字数，默认120，配合IDE自动格式化-->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+        <!--定义左大括号'{'显示位置，eol在同一行显示，nl在下一行显示-->
+        <module name="LeftCurly">
+            <property name="option" value="eol"/>
+        </module>
+        <!--option: 右大括号是否单独一行显示-->
+     <!--   <module name="RightCurly">
+            <property name="option" value="alone"/>
+        </module>-->
+
+        <module name="MemberName">
+            <property name="format" value="^m[A-Z][a-zA-Z0-9]*$"/>
+        </module>
+    </module>
+</module>
