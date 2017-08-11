@@ -1,99 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
 
     <RelativeLayout
+        android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btn_preMonth"
-            android:text="上个月"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:background="@drawable/left_arrow"
+            android:id="@+id/iv_preMonth"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
 
         <TextView
+            style="@style/CalendarTitle"
             android:id="@+id/tv_currentMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="7月8日"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/btn_nextMonth"
-            android:text="下个月"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:text="7月8日"/>
+
+        <ImageView
+            android:background="@drawable/right_arrow"
+            android:id="@+id/iv_nextMonth"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
-<LinearLayout
-    android:background="#70d6ef"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="日"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="一"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="二"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="三"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="四"/>
-
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="五"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="六"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
-    <GridView
-        android:numColumns="7"
-        android:id="@+id/gv_calendar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/calendar_main"
+        android:orientation="horizontal">
 
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="日"/>
 
-    </GridView>
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一"/>
+
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="二"/>
+
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="三"/>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="四"/>
+
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="五"/>
+
+        <TextView
+            style="@style/WeekDayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="六"/>
+    </LinearLayout>
+
+    <com.kingja.supercalendar.SuperViewPager
+        android:id="@+id/svp_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="calendar_main">#FFCE2D38</color>
+    <color name="day_selected">#d798a4</color>
+</resources>
