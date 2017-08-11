@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -139,25 +138,25 @@ public class SuperView extends GridView implements AdapterView.OnItemClickListen
             if (convertView == null) {
                 viewHolder = new ViewHolder();
                 convertView = View.inflate(getContext(), R.layout.item_day, null);
-                viewHolder.tv_item_day = (DayView) convertView.findViewById(R.id.tv_item_day);
+                viewHolder.tvItemDay = (DayView) convertView.findViewById(R.id.tv_item_day);
                 convertView.setTag(viewHolder);
 
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
-            viewHolder.tv_item_day.setText(date.getDate() + "");
+            viewHolder.tvItemDay.setText(date.getDate() + "");
             if (Util.isSameMonth(date, mCurrentCalendar.getTime())) {
-                viewHolder.tv_item_day.setNormal();
+                viewHolder.tvItemDay.setNormal();
             } else {
-                viewHolder.tv_item_day.setOtherManth();
+                viewHolder.tvItemDay.setOtherManth();
             }
 
             if (Util.isToday(date)) {
-                viewHolder.tv_item_day.setToday();
+                viewHolder.tvItemDay.setToday();
             }
 
             if (position == selectedPosition) {
-                viewHolder.tv_item_day.setSelected();
+                viewHolder.tvItemDay.setSelected();
             }
 
             return convertView;
@@ -174,7 +173,7 @@ public class SuperView extends GridView implements AdapterView.OnItemClickListen
         }
 
         class ViewHolder {
-            private DayView tv_item_day;
+            private DayView tvItemDay;
         }
     }
 
